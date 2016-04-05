@@ -1,0 +1,19 @@
+{
+    "name": "miya0001/wp-cli-plugins-api",
+    "description": "WP-CLI command for VirtualHosts",
+    "homepage": "https://github.com/miya0001/wp-cli-vhosts",
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "Takayuki Miyauchi",
+            "homepage": "https://github.com/miya0001"
+        }
+    ],
+    "autoload": {
+        "files": [ "cli.php" ]
+    },
+    "require-dev": {
+        "phpunit/phpunit": "3.7.*",
+        "behat/behat": "~2.5"
+    }
+}
