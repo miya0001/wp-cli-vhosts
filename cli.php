@@ -1,5 +1,4 @@
 <?php
-
 /**
  * WP-CLI wp vhosts command
  *
@@ -7,19 +6,31 @@
  * @maintainer Takayuki Miyauchi
  */
 
-if ( ! defined( 'WP_CLI' ) || ! WP_CLI ) {
-	return;
-}
+use \WP_CLI\Utils;
+use \WP_CLI\Dispatcher;
 
-/**
- * Manage multiple WordPresss through the command-line.
- */
-class WP_CLI_VHOSTS extends WP_CLI_Command {
+class Vhosts_Command extends WP_CLI_Command {
 
-	function __construct() {
-		parent::__construct();
+	/**
+	 * Manage multiple WordPress through the command-line.
+	 *
+	 * [<command>...]
+	 * : You can use all of the WP-CLI commands. See `wp help`.
+	 *
+	 * ## EXAMPLES
+	 *
+	 *     # Install plugin into multiple WordPress
+	 *     `wp vhosts plugin install ... --activate`
+	 *     # Update multiple WordPress
+	 *     `wp vhosts core update`
+	 *
+	 * @when before_wp_load
+	 */
+	function __invoke( $args, $assoc_args ) {
+		var_dump( func_get_args() );
+		exit;
 	}
 
 }
 
-WP_CLI::add_command( 'vhosts', 'WP_CLI_VHOSTS' );
+WP_CLI::add_command( 'vhosts', 'Vhosts_Command' );
