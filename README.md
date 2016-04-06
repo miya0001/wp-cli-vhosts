@@ -9,7 +9,7 @@ Manage multiple WordPress sites in the server.
 ## Install
 
 ```
-$ wp package install miya0001/wp-cli-vhosts
+$ wp package install miya0001/wp-cli-vhosts:@stable
 ```
 
 ### Configuration
