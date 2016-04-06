@@ -1,6 +1,6 @@
 {
     "name": "miya0001/wp-cli-plugins-api",
-    "description": "WP-CLI command for VirtualHosts",
+    "description": "Manage multiple WordPress sites in the server.",
     "homepage": "https://github.com/miya0001/wp-cli-vhosts",
     "license": "GPL-2.0",
     "authors": [
@@ -13,6 +13,9 @@
         "files": [
             "cli.php"
         ]
+    },
+    "require": {
+        "php": ">=5.4"
     },
     "require-dev": {
         "phpunit/phpunit": "3.7.*",
