@@ -13,34 +13,37 @@ abstract class Virutual_Hosts_Command extends \WP_CLI_Command {
 				$command,
 				$args,
 				$assoc_args,
-				true,           // exit_on_error
+				false,           // exit_on_error
 				true,			// return_detailed
 				array( 'path' => $site )
 			);
 
 			self::echo( $res );
-			WP_CLI::line( "" );
 		}
 	}
 
 	protected static function echo( $res ) {
 		if ( ! empty( $res->stdout ) ) {
-			WP_CLI::success( "\n" . str_replace( "Success!", "", $res->stdout ) );
-		} else {
-			WP_CLI::warning( self::parse_message( $res->stderr ) );
+			WP_CLI::line( self::colorize( $res->stdout ) );
+		}
+
+		if ( ! empty( $res->stderr ) ) {
+			WP_CLI::line( self::colorize( $res->stderr ) );
 		}
 	}
 
 	protected static function label( $str ) {
 		$label = 'Site: ' . $str;
-		$len = strlen( $label ) + 3;
-		WP_CLI::line( WP_CLI::colorize( "%G" . str_repeat( '=', $len ) . "%n" ) );
-		WP_CLI::line( WP_CLI::colorize( "%G" . $label . "%n" ) );
-		WP_CLI::line( WP_CLI::colorize( "%G" . str_repeat( '=', $len ) . "%n" ) );
+		$len = strlen( $label ) + 1;
+		WP_CLI::line( WP_CLI::colorize( "%W" . str_repeat( '=', $len ) . "%n" ) );
+		WP_CLI::line( WP_CLI::colorize( "%W" . $label . "%n" ) );
+		WP_CLI::line( WP_CLI::colorize( "%W" . str_repeat( '=', $len ) . "%n" ) );
 	}
 
-	protected static function parse_message( $message ) {
-		$lines = preg_split( "/\n/", trim( $message ) );
-		return preg_replace( "/.*\: (.*)/", "$1", array_pop( $lines ) );
+	protected static function colorize( $message ) {
+		$message = str_replace( 'Success:', WP_CLI::colorize( '%GSuccess:%n' ), $message );
+		$message = str_replace( 'Warning:', WP_CLI::colorize( '%cWarning:%n' ), $message );
+		$message = str_replace( 'Error:', WP_CLI::colorize( '%rError:%n' ), $message );
+		return $message;
 	}
 }
