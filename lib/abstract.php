@@ -5,7 +5,7 @@ abstract class Virutual_Hosts_Command extends \WP_CLI_Command {
 		return \WP_CLI::get_runner()->extra_config['sites'];
 	}
 
-	protected static function run( $command, $args, $assoc_args ) {
+	protected static function run( $command, $args, $assoc_args = array() ) {
 		foreach ( self::sites() as $site ) {
 			self::label( $site );
 
@@ -25,7 +25,7 @@ abstract class Virutual_Hosts_Command extends \WP_CLI_Command {
 
 	protected static function echo( $res ) {
 		if ( ! empty( $res->stdout ) ) {
-			WP_CLI::success( "\n" . str_replace( "Success: ", "", $res->stdout ) );
+			WP_CLI::success( "\n" . str_replace( "Success!", "", $res->stdout ) );
 		} else {
 			WP_CLI::warning( self::parse_message( $res->stderr ) );
 		}
