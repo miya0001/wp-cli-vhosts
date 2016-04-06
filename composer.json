@@ -10,7 +10,9 @@
         }
     ],
     "autoload": {
-        "files": [ "cli.php" ]
+        "files": [
+            "cli.php"
+        ]
     },
     "require-dev": {
         "phpunit/phpunit": "3.7.*",
