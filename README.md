@@ -1,8 +1,10 @@
-# wp vhosts <sub-command>
+# wp vhosts &lt;sub-command&gt;
 
 Manage WordPresses in VirtualHosts.
 
-## Configuration
+## Install
+
+### Configuration
 
 Place `sites` in the `.wp-cli/config.yml`.
 
@@ -12,6 +14,8 @@ sites:
 	- /path/to/example.org/www
 	- /path/to/example.jp/www
 ```
+
+http://wp-cli.org/config/
 
 ## Example
 
