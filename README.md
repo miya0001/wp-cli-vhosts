@@ -17,83 +17,34 @@ sites:
 
 http://wp-cli.org/config/
 
-## Example
+## Sub commands
+
+* wp vhosts core
+* wp vhosts core language
+* wp vhosts plugin
+* wp vhosts theme
+
+## Examples
 
 See help:
 
 ```
-NAME
-
-  wp vhosts
-
-DESCRIPTION
-
-  Manage WordPresses for VirtualHosts.
-
-SYNOPSIS
-
-  wp vhosts <command>
-
-SUBCOMMANDS
-
-  core        
-  plugin      
-  theme
+$ wp help vhosts
 ```
 
 Update all WordPress.
 
 ```
 $ wp vhosts core update
-======================================
-Site: /Users/miyauchi/Desktop/wp1/www
-======================================
-Success: WordPress is up to date.
+```
 
-======================================
-Site: /Users/miyauchi/Desktop/wp2/www
-======================================
-Success: WordPress is up to date.
-
-======================================
-Site: /Users/miyauchi/Desktop/wp3/www
-======================================
-Success: WordPress is up to date.
+Update all plugins in all WordPress sites.
+```
+$ wp vhosts plugin update --all
 ```
 
 Install jetpack into all WordPress sites.
 
 ```
 $ wp vhosts plugin install jetpack
-========================================
-Site: /path/to/example.com/www
-========================================
-Success:
-Installing Jetpack by WordPress.com (3.9.6)
-Downloading install package from https://downloads.wordpress.org/plugin/jetpack.3.9.6.zip...
-Unpacking the package...
-Installing the plugin...
-Plugin installed successfully.
-
-
-========================================
-Site: /path/to/example.org/www
-========================================
-Success:
-Installing Jetpack by WordPress.com (3.9.6)
-Downloading install package from https://downloads.wordpress.org/plugin/jetpack.3.9.6.zip...
-Unpacking the package...
-Installing the plugin...
-Plugin installed successfully.
-
-
-========================================
-Site: /path/to/example.jp/www
-========================================
-Success:
-Installing Jetpack by WordPress.com (3.9.6)
-Downloading install package from https://downloads.wordpress.org/plugin/jetpack.3.9.6.zip...
-Unpacking the package...
-Installing the plugin...
-Plugin installed successfully.
 ```
