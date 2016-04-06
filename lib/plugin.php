@@ -1,10 +1,4 @@
 <?php
-/**
- * WP-CLI wp vhosts command
- *
- * @subpackage commands/community
- * @maintainer Takayuki Miyauchi
- */
 
 class Virutual_Hosts_Plugin_Command extends Virutual_Hosts_Command {
 
