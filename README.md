@@ -19,8 +19,52 @@ http://wp-cli.org/config/
 
 ## Example
 
+See help:
+
 ```
-$ wp vhosts plugin install contact-form-7 akismet
+NAME
+
+  wp vhosts
+
+DESCRIPTION
+
+  Manage WordPresses for VirtualHosts.
+
+SYNOPSIS
+
+  wp vhosts <command>
+
+SUBCOMMANDS
+
+  core        
+  plugin      
+  theme
+```
+
+Update all WordPress.
+
+```
+$ wp vhosts core update
+======================================
+Site: /Users/miyauchi/Desktop/wp1/www
+======================================
+Success: WordPress is up to date.
+
+======================================
+Site: /Users/miyauchi/Desktop/wp2/www
+======================================
+Success: WordPress is up to date.
+
+======================================
+Site: /Users/miyauchi/Desktop/wp3/www
+======================================
+Success: WordPress is up to date.
+```
+
+Install jetpack into all WordPress sites.
+
+```
+$ wp vhosts plugin install jetpack
 ========================================
 Site: /path/to/example.com/www
 ========================================
