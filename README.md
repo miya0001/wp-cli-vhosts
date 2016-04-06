@@ -2,6 +2,8 @@
 
 Manage multiple WordPress sites in the server.
 
+Demo: https://www.youtube.com/watch?v=d0ozf2JmkOg
+
 ## Requires
 
 * WP-CLI 0.23 or later
