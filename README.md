@@ -1,6 +1,6 @@
 # wp vhosts &lt;sub-command&gt;
 
-Manage WordPresses in VirtualHosts.
+Manage multiple WordPress sites in the server.
 
 ## Install
 
