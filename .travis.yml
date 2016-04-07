@@ -20,11 +20,5 @@ cache:
   - composer
   - $HOME/.composer/cache
 
-env:
-  global:
-    - WP_CLI_BIN_DIR=/tmp/wp-cli-phar
-
-before_script:
-  - bash bin/install-package-tests.sh
-
-script: ./vendor/bin/behat
+before_script: npm run setup
+script: npm test

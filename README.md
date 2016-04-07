@@ -66,3 +66,10 @@ Install jetpack into all WordPress sites.
 ```
 $ wp vhosts plugin install jetpack
 ```
+
+## How to contribute
+
+```
+$ npm run setup
+$ npm test
+```

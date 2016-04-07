@@ -1,0 +1,19 @@
+{
+  "name": "wp-cli-vhosts",
+  "version": "1.2.1",
+  "description": "[![Build Status](https://travis-ci.org/miya0001/wp-cli-vhosts.svg?branch=master)](https://travis-ci.org/miya0001/wp-cli-vhosts)",
+  "scripts": {
+    "setup": "WP_CLI_BIN_DIR=/tmp/wp-cli-phar bash bin/install-package-tests.sh",
+    "test": "WP_CLI_BIN_DIR=/tmp/wp-cli-phar ./vendor/bin/behat"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miya0001/wp-cli-vhosts.git"
+  },
+  "author": "",
+  "license": "GPLv2",
+  "bugs": {
+    "url": "https://github.com/miya0001/wp-cli-vhosts/issues"
+  },
+  "homepage": "https://github.com/miya0001/wp-cli-vhosts#readme"
+}

@@ -8,3 +8,9 @@ Feature: Test that WP-CLI loads.
       """
       Manage WordPresses for VirtualHosts.
       """
+
+    When I run `wp help vhosts core`
+    Then STDOUT should contain:
+      """
+      Download, install, update and otherwise manage all WordPress sites proper.
+      """
