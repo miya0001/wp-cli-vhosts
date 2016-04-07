@@ -9,6 +9,9 @@ Feature: Test that WP-CLI loads.
     When I run `wp help vhosts core`
     Then the return code should be 0
 
+    When I run `wp help vhosts core language`
+    Then the return code should be 0
+
     When I run `wp help vhosts list`
     Then the return code should be 0
 

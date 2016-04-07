@@ -36,6 +36,8 @@ http://wp-cli.org/config/
 * wp vhosts plugin
 * wp vhosts theme
 
+Try `wp help vhosts`.
+
 ## Examples
 
 See help:
