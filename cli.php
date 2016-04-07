@@ -1,5 +1,9 @@
 <?php
 
+if ( ! defined( 'WP_CLI' ) || ! WP_CLI ) {
+	return;
+}
+
 require_once( dirname( __FILE__ ) . '/lib/abstract.php' );
 
 /**
