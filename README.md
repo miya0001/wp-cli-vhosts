@@ -1,5 +1,7 @@
 # wp vhosts &lt;sub-command&gt;
 
+[![Build Status](https://travis-ci.org/miya0001/wp-cli-vhosts.svg?branch=master)](https://travis-ci.org/miya0001/wp-cli-vhosts)
+
 Manage multiple WordPress sites in the server.
 
 Demo: https://www.youtube.com/watch?v=d0ozf2JmkOg
