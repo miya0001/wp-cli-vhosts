@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * Manage languages of all sites.
+ */
 class Virutual_Hosts_Core_Language_Command extends Virutual_Hosts_Command {
 
 	/**

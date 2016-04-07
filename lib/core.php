@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * Download, install, update and otherwise manage all WordPress sites proper.
+ */
 class Virutual_Hosts_Core_Command extends Virutual_Hosts_Command {
 
 	/**

@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * Manage plugins of all sites.
+ */
 class Virutual_Hosts_Plugin_Command extends Virutual_Hosts_Command {
 
 	/**

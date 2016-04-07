@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * Manage themes of all sites.
+ */
 class Virutual_Hosts_Theme_Command extends Virutual_Hosts_Command {
 
 	/**
