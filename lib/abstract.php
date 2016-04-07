@@ -18,11 +18,11 @@ abstract class Virutual_Hosts_Command extends \WP_CLI_Command {
 				array( 'path' => $site )
 			);
 
-			self::echo( $res );
+			self::display( $res );
 		}
 	}
 
-	protected static function echo( $res ) {
+	protected static function display( $res ) {
 		if ( ! empty( $res->stdout ) ) {
 			WP_CLI::line( self::colorize( $res->stdout ) );
 		}
