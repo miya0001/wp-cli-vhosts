@@ -69,6 +69,23 @@ $ wp vhosts plugin install jetpack
 
 ## How to contribute
 
+### Clone this repository.
+
+```
+$ git clone git@github.com:miya0001/wp-cli-vhosts.git
+```
+
+### Manually activate.
+
+Add following into your `~/.wp-cli/config.yml`.
+
+```
+require:
+  - commands/wp-cli-vhosts/cli.php
+```
+
+### Automated testing
+
 ```
 $ npm run setup
 $ npm test
