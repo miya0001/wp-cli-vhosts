@@ -1,15 +1,15 @@
 <?php
 
-abstract class Virutual_Hosts_Command extends \WP_CLI_Command {
+abstract class Virutual_Hosts_Command extends WP_CLI_Command {
 	protected static function sites() {
-		return \WP_CLI::get_runner()->extra_config['sites'];
+		return WP_CLI::get_runner()->extra_config['sites'];
 	}
 
 	protected static function run( $command, $args, $assoc_args = array() ) {
 		foreach ( self::sites() as $site ) {
 			self::label( $site );
 
-			$res = \WP_CLI::launch_self(
+			$res = WP_CLI::launch_self(
 				$command,
 				$args,
 				$assoc_args,
