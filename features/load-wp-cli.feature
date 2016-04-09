@@ -1,4 +1,4 @@
-Feature: Test that WP-CLI loads.
+Feature: Test that WP-CLI VHOSTS commands loads.
 
   Scenario: WP-CLI loads for `wp vhosts` tests
 
@@ -18,6 +18,9 @@ Feature: Test that WP-CLI loads.
     Then the return code should be 0
 
     When I run `wp help vhosts theme`
+    Then the return code should be 0
+
+    When I run `wp vhosts version`
     Then the return code should be 0
 
     When I run `wp vhosts list`

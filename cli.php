@@ -25,6 +25,15 @@ class WP_CLI_Virutual_Hosts extends Virutual_Hosts_Command
 			WP_CLI::line( self::colorize( $site ) );
 		}
 	}
+
+	/**
+	 * Print `wp vhosts` version.
+	 *
+	 * @when before_wp_load
+	 */
+	function version( $args ) {
+		WP_CLI::line( trim( file_get_contents( dirname( __FILE__ ) . '/VERSION' ) ) );
+	}
 }
 
 WP_CLI::add_command( 'vhosts', 'WP_CLI_Virutual_Hosts'  );
