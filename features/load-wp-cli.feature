@@ -86,3 +86,16 @@ Feature: Test that WP-CLI VHOSTS commands loads.
       """
       Pass --path=`path/to/wordpress` or run `wp core download`.
       """
+
+  Scenario: Add vhosts to config
+    Given a WP install
+    When I run `wp vhosts add`
+    Then the return code should be 0
+    And STDOUT should contain:
+      """
+      was added to the
+      """
+    And STDOUT should contain:
+      """
+      config.yml
+      """
