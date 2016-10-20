@@ -1,6 +1,7 @@
 {
     "name": "miya0001/wp-cli-vhosts",
     "description": "Manage multiple WordPress sites in the server.",
+	"type": "wp-cli-package",
     "homepage": "https://github.com/miya0001/wp-cli-vhosts",
     "license": "GPL-2.0",
     "authors": [
